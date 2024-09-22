@@ -1,0 +1,22 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Gradient (Degrade) Renkler -->
+    <gradient
+        android:angle="45"
+        android:startColor="#00FFFF"
+    android:centerColor="#2196F3"
+    android:endColor="#004DFF"
+    android:type="linear" />
+
+    <!-- Köşe yuvarlama (radius) -->
+    <corners android:radius="16dp" />
+
+    <!-- İç boşluk (padding) -->
+    <padding
+        android:left="10dp"
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp" />
+
+    <!-- Buton çevresi (stroke) -->
+    <stroke android:width="2dp" android:color="#FFFFFF" />
+</shape>
