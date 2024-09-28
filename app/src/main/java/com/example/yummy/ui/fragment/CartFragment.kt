@@ -49,29 +49,36 @@ class CartFragment : Fragment() {
     }
 
     private fun observeData(kisi_adi: String) {
-        viewModel.sepettekiYemekleriGetir(kisi_adi)
-        viewModel.sepetYemekler.observe(viewLifecycleOwner) { yemekler ->
-            if (yemekler != null && yemekler.isNotEmpty()) {
-                adapter.updateList(yemekler)
-                binding.cartRV.visibility = View.VISIBLE
-                binding.blankAnimation.visibility = View.GONE
-                binding.blankAnimation.cancelAnimation() // Animasyonu durdur
-                Log.d("CartFragment", "Yemekler: $yemekler")
-            } else {
-                binding.cartRV.visibility = View.GONE
-                binding.blankAnimation.visibility = View.VISIBLE
-                binding.blankAnimation.playAnimation() // Animasyonu başlat
-                binding.blankAnimation.loop(true)
-                Log.d("CartFragment", "Sepet boş")
+
+        try {
+            viewModel.sepettekiYemekleriGetir(kisi_adi)
+            viewModel.sepetYemekler.observe(viewLifecycleOwner) { yemekler ->
+                if (yemekler != null && yemekler.isNotEmpty()) {
+                    adapter.updateList(yemekler)
+                    binding.cartRV.visibility = View.VISIBLE
+                    binding.blankAnimation.visibility = View.GONE
+                    binding.blankAnimation.cancelAnimation() // Animasyonu durdur
+                    Log.d("CartFragment", "Yemekler: $yemekler")
+
+                } else {
+                    binding.cartRV.visibility = View.GONE
+                    binding.blankAnimation.visibility = View.VISIBLE
+                    binding.blankAnimation.playAnimation() // Animasyonu başlat
+                    binding.blankAnimation.loop(true)
+                    Log.d("CartFragment", "Sepet boş")
+                }
             }
+        }catch (e: Exception){
+            Log.e("CartFragment", "Hata: ${e.message}")
         }
+
     }
-
-
 
     override fun onResume() {
         super.onResume()
         viewModel.sepettekiYemekleriGetir("osman")
 
     }
+
+
 }

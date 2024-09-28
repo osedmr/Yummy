@@ -2,6 +2,7 @@ package com.example.yummy.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.yummy.data.repository.FavoriteRepository
 import com.example.yummy.data.repository.MealsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -10,7 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class ProductDetailsViewModel @Inject constructor(var mrepo: MealsRepository) : ViewModel() {
+class ProductDetailsViewModel @Inject constructor(var mrepo: MealsRepository , var frepo: FavoriteRepository) : ViewModel() {
 
     val quantity = MutableLiveData<Int>().apply { value = 1 }  // Varsayılan adet: 1
     val totalPrice = MutableLiveData<Int>()
@@ -53,6 +54,12 @@ class ProductDetailsViewModel @Inject constructor(var mrepo: MealsRepository) : 
         CoroutineScope(Dispatchers.Main).launch {
             mrepo.sepeteYemekEkle(yemek_adi, yemek_resim_adi, yemek_fiyat, yemek_siparis_adet,kisi_adi)
         }
+    }
 
+
+    fun addFavorite(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: Int){
+        CoroutineScope(Dispatchers.Main).launch {
+            frepo.addFavorite(yemek_adi, yemek_resim_adi, yemek_fiyat)
+        }
     }
 }

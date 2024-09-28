@@ -22,10 +22,19 @@
         <argument
             android:name="meals"
             app:argType="com.example.yummy.data.entity.Meals" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.example.yummy.ui.fragment.CartFragment"
         android:label="fragment_basket"
         tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.yummy.ui.fragment.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+    </fragment>
 </navigation>
