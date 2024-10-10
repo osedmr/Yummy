@@ -32,7 +32,8 @@ class MealsAdapter(
         val meals = getItem(position) // `getItem` ile öğeyi al
         val b = holder.binding
         val url = "http://kasimadalan.pe.hu/yemekler/resimler/${meals.yemek_resim_adi}"
-        Glide.with(b.root.context).load(url).override(300, 300).into(b.mealImage)
+        Glide.with(b.root.context).load(url).override(300, 300)
+            .into(b.mealImage)
         b.mealName.text = meals.yemek_adi
         b.mealPrice.text = "${meals.yemek_fiyat} ₺"
 

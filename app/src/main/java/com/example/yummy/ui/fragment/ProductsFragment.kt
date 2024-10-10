@@ -74,12 +74,6 @@ class ProductsFragment : Fragment() {
             filterFragment.show(parentFragmentManager, "PriceFilter")
         }
 
-
-
-
-
-
-
         return binding.root
     }
 

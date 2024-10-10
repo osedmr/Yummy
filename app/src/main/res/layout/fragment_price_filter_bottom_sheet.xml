@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -11,29 +11,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/priceSlider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/Filter"
+        android:stepSize="30"
         android:valueFrom="0"
-        android:valueTo="120"
-        android:stepSize="30"/>
+        android:valueTo="120" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/filterButton"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Filtreyi Uygula" />
+
         <Button
             android:id="@+id/resetButton"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
             android:text="Filtreyi Kaldır" />

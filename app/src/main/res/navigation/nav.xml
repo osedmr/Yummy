@@ -37,4 +37,9 @@
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite" >
     </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.yummy.ui.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
