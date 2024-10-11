@@ -5,19 +5,159 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.ProfileFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profile Fragment"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/wave_background"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.522" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hesabım"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ose1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:text="Kullanıcı Bilgilerim"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:drawableTint="#FF6D00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ose2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_layout_margin_top"
+        android:layout_marginStart="16dp"
+        android:drawableStart="@drawable/baseline_credit_card_24"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:text="Kayıtlı Kartlarım"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:drawableTint="#FF6D00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ose1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ose3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/profile_layout_margin_top"
+        android:drawableStart="@drawable/baseline_password_24"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:text="Şifre Değişikliği"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ose2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ose4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_layout_margin_top"
+        android:layout_marginStart="16dp"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:text="E-Posta Değişikliği"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:drawableTint="#FF6D00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ose3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ose5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_layout_margin_top"
+        android:drawableStart="@drawable/baseline_notifications_none_24"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:layout_marginStart="16dp"
+        android:text="Duyuru Tercihleri"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:drawableTint="#FF6D00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ose4" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ose6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_layout_margin_top"
+        android:drawableStart="@drawable/baseline_contact_phone_24"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:text="İletişim Bilgileri"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:drawableTint="#FF6D00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ose5" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ose7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_layout_margin_top"
+        android:drawableStart="@drawable/baseline_read_more_24"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:layout_marginStart="16dp"
+        android:text="Daha Fazla"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:drawableTint="#FF6D00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ose6" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ose8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_layout_margin_top"
+        android:layout_marginStart="16dp"
+        android:drawableStart="@drawable/baseline_logout_24"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:text="Çıkış Yap"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:drawableTint="#FF6D00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ose7" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
